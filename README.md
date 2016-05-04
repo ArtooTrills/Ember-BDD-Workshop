@@ -40,3 +40,5 @@ You will need the following things properly installed on your computer.
 * [ember-cli](http://ember-cli.com/)
 * [ember-mirage](http://www.ember-cli-mirage.com/)
 * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+* [Uncle Bob's blog](https://blog.8thlight.com/uncle-bob/archive.html)
+* [Google Clean code series](https://www.youtube.com/playlist?list=PL693EFD059797C21E)

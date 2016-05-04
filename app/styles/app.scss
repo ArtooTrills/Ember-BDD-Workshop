@@ -1,14 +1,158 @@
+@import 'helpers';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
 body {
+  background: no-repeat top center #faf4f1;
+  background-image: url("/assets/images/background-shades.png");
+  background-image: url("/assets/images/background-shades.svg"), none;
+  font-family: 'Open Sans', sans-serif;
 
-    // Thanks emberjs.com :)
-    background: no-repeat top center #faf4f1;
-    background-image: url('/assets/images/background-shades.png');
-    background-image: url('/assets/images/background-shades.svg'),none;
-    //TODO remember to remove the assets if you remove the above
+  overflow: hidden;
+}
 
-    font-family: 'Open Sans', sans-serif;
+.fl-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
 
+.listing {
+  @include rowFlex();
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.album {
+  background: white;
+  cursor: pointer;
+  user-select: none;
+
+  border-radius: 3px;
+  @include shadow2();
+  margin: 0rem 6rem 4rem;
+  max-width: 30%;
+
+  &:hover {
+    @include shadow12();
+  }
+
+  &__artwork {
+    align: middle;
+  }
+
+  &__desc {
     display: flex;
+    flex-direction: column;
+
+    &__title {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      box-sizing: border-box;
+      overflow: hidden;
+      margin: 0 0.4rem;
+      font-size: 1rem;
+    }
+
+    &__artist {
+      color: rgba(0,0,0,.54);
+      text-align: right;
+      margin: 0 0.4rem 0.4rem 0;
+      font-style: italic;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__artwork img {
+    width: 11.5rem;
+  }
+
+}
+
+.listing,
+.reviews {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+
+.reviews {
+  background: #fafafa;
+  border-radius: 3px;
+  @include shadow12();
+  @include rowFlex();
+  max-width: 30%;
+}
+
+.feedback {
+  @include rowFlex();
+  margin: 2rem 1rem 0 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 3px solid #616161;
+    &__review {
+    resize: none;
+    width: 100%;
+  }
+  &__submit {
+    margin-left: 30%;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+.review {
+
+  margin: 2rem 3rem;
+  padding: 1rem;
+  border-radius: 3px;
+  @include shadow2();
+  background: white;
+  @include rowFlex();
+
+  &__author {
+    font-weight:bold;
+    font-size: 0.85rem;
+    font-style: italic;
+    width: 100%;
+    text-align: right;
+  }
+}
+
+input{
+  border:none;
+  border-bottom:1px solid #757575;
+  &:focus {
+    outline: none;
+  }
+}
+
+.search {
+    width: 100%;
+    margin: 2rem 1rem;
+    > label {
+      font-style:italic;
+    }
+
+  &__input {
+    height: 2.5rem;
+    font-size: 1.5rem;
+    width: 100%;
+    @include shadow2();
+    &:focus {
+    @include shadow12();
+    }
+  }
 }
