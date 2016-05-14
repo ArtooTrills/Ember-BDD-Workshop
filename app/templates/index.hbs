@@ -1,1 +1,10 @@
-{{outlet}}
+<section class="listing">
+<!--  <div class="search">
+    <label for="search__input>">Search by album or artist</label>
+    <input type="text" name="search__input" class="search__input" />
+  </div>
+  -->
+{{#each model as |album|}}
+  {{fancy-album album=album}}
+{{/each}}
+</section>
