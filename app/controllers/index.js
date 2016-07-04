@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const get = {Ember};
+
 
 export default Ember.Controller.extend({
 
@@ -10,13 +10,10 @@ export default Ember.Controller.extend({
     const searchTerm = this.get('search').trim();
 
     const albums = this.get('model').filter(album => {
-      if(searchTerm == '') {
+      if(searchTerm === '') {
         return album;
       }
-      if(
-        album.artist.toLowerCase().indexOf(searchTerm.toLowerCase()) != -1 ||
-        album.name.toLowerCase().indexOf(searchTerm.toLowerCase()) != -1
-                                                 ) {
+      if(album.get('artist').toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1 || album.get('name').toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
         return album;
       }
     });

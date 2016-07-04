@@ -1,12 +1,9 @@
-import Ember from 'ember';
+import DS from 'ember-data';
 
+export default DS.Model.extend({
+  name:  DS.attr('string'),
 
-export default Ember.Object.extend({
+  artist: DS.attr('string'),
 
-  name:  '',
-
-  artist: '',
-
-  albumArtUrl: ''
-
+  albumArtUrl: DS.attr('string')
 });

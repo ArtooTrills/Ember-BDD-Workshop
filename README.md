@@ -10,6 +10,8 @@ You will need the following things properly installed on your computer.
 * [Bower](http://bower.io/)
 * [Ember CLI](http://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
+* [Ember CLI Mirage](http://www.ember-cli-mirage.com/)
+* [Ember CLI Yadda](https://github.com/curit/ember-cli-yadda)
 
 ## Installation
 

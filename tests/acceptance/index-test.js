@@ -1,17 +1,12 @@
 import { test } from 'qunit';
 import moduleForAcceptance from 'blr-tdd-workshop/tests/helpers/module-for-acceptance';
-import Pretender from 'pretender';
-import Albums from '../fixtures/albums';
 import Ember from 'ember';
 
-moduleForAcceptance('Acceptance | index', {
-  beforeEach() {
-   new Pretender(function() {
-    this.get('/albums', function() {
-      return [200, {'content-type': 'application/json'}, JSON.stringify(Albums)];
-    });
-  });
- }
+moduleForAcceptance('Acceptance | index',{
+
+  beforeEach(){
+    server.createList('album',12);
+  }
 });
 
 

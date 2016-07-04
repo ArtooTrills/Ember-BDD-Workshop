@@ -28,6 +28,8 @@ export default function() {
     this.get('/contacts/:id', ['contact', 'addresses']);
   */
 
+  this.get('/albums');
+
   /*
     POST shorthands
 
