@@ -16,7 +16,9 @@ You will need the following things properly installed on your computer.
 ## Script
 
 npm install phantomjs
+
 ember install ember-cli-mirage
+
 ember install ember-cli-yadda
 
 ## Installation
