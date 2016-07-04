@@ -13,6 +13,12 @@ You will need the following things properly installed on your computer.
 * [Ember CLI Mirage](http://www.ember-cli-mirage.com/)
 * [Ember CLI Yadda](https://github.com/curit/ember-cli-yadda)
 
+## Script
+
+npm install phantomjs
+ember install ember-cli-mirage
+ember install ember-cli-yadda
+
 ## Installation
 
 * `git clone <repository-url>` this repository
