@@ -1,6 +1,6 @@
-Feature: search empty string
+Feature: search string
 
-  Scenario: Searching fancy albums with empty string
+  Scenario: Searching fancy albums with any string
 
   	Given I have [n] albums
   	When I visit fancy album page
@@ -11,4 +11,4 @@ Where:
 
 	n	|search |these many
 	12	|X  	|1
-	 	
+	
