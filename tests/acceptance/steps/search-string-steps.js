@@ -5,7 +5,7 @@ import steps from './steps';
 
 export default function(assert) {
   return steps(assert)
-    .given('I enter "$search"', (search,next) => {	
+    .given('I enter $search', (search,next) => {	
    	 fillIn('input.search__input',search);
    	 assert.ok(true, this.step);
    	 andThen(()=>next());

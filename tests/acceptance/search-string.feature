@@ -4,7 +4,7 @@ Feature: search string
 
   	Given I have [n] albums
   	When I visit fancy album page
-    Given I enter "[search]"
+    Given I enter [search]
     Then I should see [these many] albums
 
 Where:
